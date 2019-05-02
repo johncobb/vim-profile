@@ -1,19 +1,18 @@
+## Configure Vim
 
-# Navigate to home profile
-cd ~/
-
-# Install vim-profile
+### Clone vim-profile to home folder
+```console
 git clone https://github.com/johncobb/vim-profile.git
-
-# Copy .vimrc to home folder
+# copy .vimrc to home filder
 cp .vimrc ~/
 
-# Install vundle
+# install vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-# Launch VIM
+
+
+# launch vim
 vim
-
-# Install the Plugins
+# Install plugins
 :PluginInstall
-
-# GtG!
+```
+### GtG!
