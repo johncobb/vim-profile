@@ -1,19 +1,23 @@
-## Configure Vim
+# Vim Profile
 
-### Clone vim-profile to home folder
+### Clone repository
 ```console
 git clone https://github.com/johncobb/vim-profile.git
+```
 
-# copy .vimrc to home filder
-cp .vimrc ~/
+## Run installer
+Run installer.
+``console
+. install.sh
+```
 
-# install vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-# launch vim
+## Launch Vim
+```console
 vim
+```
 
-# Install plugins
+## Install plugins
+Run the plugin installer.
 :PluginInstall
 ```
-### GtG!
