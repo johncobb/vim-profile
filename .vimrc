@@ -6,14 +6,18 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'tpope/vim-commentary'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'jnurmine/Zenburn'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes.git'
 Plugin 'jistr/vim-nerdtree-tabs'
 call vundle#end()
 filetype plugin indent on
+
+:set backspace=indent,eol,start
 
 :let mapleader = ","
 
@@ -40,7 +44,7 @@ filetype plugin indent on
 :let python_highlight_all=1
 :let NERDTreeIgnore=['\.pyc$','\~$']	" ignore files in NERDTree
 au BufNewFile,BufRead *.py 
-    \ set tabstop=8 		|
+    \ set tabstop=4 		|
     \ set softtabstop=4		|
     \ set shiftwidth=4		|
     \ set textwidth=79		|
