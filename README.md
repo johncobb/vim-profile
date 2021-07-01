@@ -7,7 +7,7 @@ git clone https://github.com/johncobb/vim-profile.git
 
 ## Run installer
 Run installer.
-``console
+```console
 . install.sh
 ```
 
