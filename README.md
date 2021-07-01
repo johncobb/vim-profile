@@ -19,5 +19,6 @@ vim
 
 ## Install plugins
 Run the plugin installer.
+```console
 :PluginInstall
 ```
