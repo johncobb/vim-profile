@@ -1,6 +1,6 @@
 # Vim Profile
 
-### Clone repository
+## Clone repository
 ```console
 git clone https://github.com/johncobb/vim-profile.git
 ```
