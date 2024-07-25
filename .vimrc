@@ -1,8 +1,7 @@
-
 "***************************************
 " Vundle SETTINGS
 "***************************************
-set nocompatible                
+set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -14,10 +13,21 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes.git'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'dense-analysis/ale'
+Plugin 'nvie/vim-flake8'
+
 call vundle#end()
 filetype plugin indent on
 
+:set autoread
+:set cursorline
+:set complete+=kspell
+:set completeopt=menuone,longest
+:set shortmess+=c
 :set backspace=indent,eol,start
+
+:let g:ale_linters = {'python': ['flake8']}
 
 :let mapleader = ","
 
@@ -37,13 +47,13 @@ filetype plugin indent on
 " Look and Feel
 :syntax enable
 :set number
-:colorscheme candyman 
+:colorscheme candyman
 :set laststatus=2
 
 " Python stuff
 :let python_highlight_all=1
 :let NERDTreeIgnore=['\.pyc$','\~$']	" ignore files in NERDTree
-au BufNewFile,BufRead *.py 
+au BufNewFile,BufRead *.py
     \ set tabstop=4 		|
     \ set softtabstop=4		|
     \ set shiftwidth=4		|
@@ -53,18 +63,24 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 " Web stuff
-au BufNewFile,BufRead *.js,*.html,*.css
-    \ set tabstop=2		|
-    \ set softtabstop=2		|
-    \ set shiftwidth=2		
+au BufNewFile,BufRead *.js,*.html,*.css,*.c,*.ino
+    \ set tabstop=4 		|
+    \ set softtabstop=4		|
+    \ set shiftwidth=4		|
+    \ set textwidth=79		|
+    \ set expandtab		|
+    \ set autoindent		|
+    \ set fileformat=unix
 
-
+au VimEnter * NERDTree
 :set clipboard=unnamed
 
 :set encoding=utf-8
 
 :set splitbelow
 :set splitright
+
+:nmap <F12> :NERDTreeToggle<CR>
 
 :nnoremap <C-J> <C-W><C-J>
 :nnoremap <C-K> <C-W><C-K>
@@ -73,5 +89,6 @@ au BufNewFile,BufRead *.js,*.html,*.css
 
 :inoremap jk <esc>l
 :inoremap kj <esc>l
+
 
 
